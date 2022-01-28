@@ -6,8 +6,11 @@ import com.foodtruckfinder.implementation.DataFilter;
 import com.foodtruckfinder.model.FoodTruck;
 import com.foodtruckfinder.model.Location;
 import com.foodtruckfinder.utils.ConsoleUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Main {
+    private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
         try {
@@ -33,7 +36,7 @@ public class Main {
             }
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage(), e);
         }
     }
 }

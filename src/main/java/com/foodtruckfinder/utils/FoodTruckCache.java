@@ -1,16 +1,11 @@
 package com.foodtruckfinder.utils;
 
-import java.text.SimpleDateFormat;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 import com.foodtruckfinder.implementation.DataLoader;
 import com.foodtruckfinder.model.FoodTruck;
-import org.springframework.stereotype.Component;
 
 //@Component
 public class FoodTruckCache {
@@ -30,7 +25,7 @@ public class FoodTruckCache {
     /**
      * Returns one single instance of the FoodTruck Cache throughout the span of the application
      */
-    public static FoodTruckCache loadCache() {
+    public static FoodTruckCache loadCache() throws IOException {
         // To make the instance of the Cache thread safe
         synchronized (FoodTruckCache.class) {
             if (instance == null) {
@@ -45,21 +40,7 @@ public class FoodTruckCache {
     /**
      * This method is called to load cache data
      */
-    public void loadCacheData() {
-        instance.foodTruckData = (new DataLoader().GetFoodTruckDataFromFile());
+    public void loadCacheData() throws IOException {
+        instance.foodTruckData = (new DataLoader().GetFoodTruckDataFromFile(Constants.CSV_FILE_PATH));
     }
-
-//    /**
-//     * Populates the geo hash map
-//     */
-//    public void setGeoHashMap (Map<String,Integer> map) {
-//        this.geoHashMap = map;
-//    }
-//
-//    /**
-//     * Returns the geo hash map
-//     */
-//    public Map<String,Integer> getGeoHashMap () {
-//        return this.geoHashMap;
-//    }
 }
