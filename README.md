@@ -17,7 +17,7 @@ San Francisco's food truck open dataset is located here and there is an endpoint
 Good luck! Please send a link to your solution on Github back to us at least 12 hours before your interview so we can review it before we speak.
 
 
-# Food Truck Data From San Francisco Government's Data Set
+# Food Truck Data Based on San Francisco Government's Data Set that was provided as a CSV file
 This is a Java spring Boot  Rest API and command line application which dispalys the food trucks based on the users latitude and longitude. The data can be accessed using sample postman or will be displayed on the command line.
 
 # Pre-requisites for executing the application
