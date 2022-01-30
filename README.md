@@ -58,8 +58,6 @@ Content-Length: 56
 
 
 - Open the terminal/command prompt and navigate to the classFiles directory in the TakeHomeTest folder using the command:
-    - For Mac: cd TakeHomeTest/classFiles
-    - For Windows: cd TakeHomeTest\classFiles
 
     - To run the program execute the following commands given below:
         - For Mac:
