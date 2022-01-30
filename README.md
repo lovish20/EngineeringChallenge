@@ -64,13 +64,12 @@ Content-Length: 56
     - To run the program execute the following commands given below:
         - For Mac:
             ```
-            mvn clean install
-            java -cp target/FoodTruckFinder-0.0.1-SNAPSHOT.jar com.foodtruckfinder.Main
+          cd out/artifacts/EngineeringChallengeTerminal_jar/
+          java com.foodtruckfinder.Main
                   ```
         - For Windows:
            ```
-            mvn clean install
-            java -cp target\FoodTruckFinder-0.0.1-SNAPSHOT.jar com.foodtruckfinder.Main
+          cd out\artifacts\EngineeringChallengeTerminal_jar\
+            java com.foodtruckfinder.Main
            ```
 
-- 
